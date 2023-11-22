@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 
 function NavBar({ pokemonList, setPokemonIndex }) {
   const handlePokemonClick = (index) => {
@@ -14,6 +14,10 @@ function NavBar({ pokemonList, setPokemonIndex }) {
       ))}
     </div>
   );
+}
+NavBar.propTypes = {
+    pokemonList : PropTypes.arrayOf(PropTypes.string),
+    setPokemonIndex : PropTypes.number.isRequired,
 }
 
 export default NavBar;
