@@ -16,8 +16,13 @@ function NavBar({ pokemonList, setPokemonIndex }) {
   );
 }
 NavBar.propTypes = {
-    pokemonList : PropTypes.arrayOf(PropTypes.string),
-    setPokemonIndex : PropTypes.number.isRequired,
-}
+    pokemonList: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired
+      })
+    ),
+    setPokemonIndex: PropTypes.func.isRequired
+  };
+  
 
 export default NavBar;
